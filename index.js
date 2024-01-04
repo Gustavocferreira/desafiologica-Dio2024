@@ -1,8 +1,8 @@
 // Valores de exemplo para nome do herói e experiência
-let nomeHeroi = "SuperGustavo";
-let xpHeroi = 20000; // Experiência do herói
+let nomeHeroi = "SuperGustavo"; // nome do herói
+let xpHeroi = 20000; // nivel do herói
 
-// Função para mapear XP para uma categoria
+// para mapear o XP para um elo disponível
 function mapearParaElo(xp) {
     if (xp < 1000) return "Ferro";
     if (xp <= 2000) return "Bronze";
@@ -14,7 +14,7 @@ function mapearParaElo(xp) {
     return "Radiante";
 }
 
-// Função para determinar o nível do herói usando switch
+// Função para determinar o nível do herói
 function nivelHeroi(xp) {
     let categoria = mapearParaElo(xp);
 
@@ -38,6 +38,6 @@ function nivelHeroi(xp) {
     }
 }
 
-// Determinar e exibir o nível do herói
+// exibir o nível do herói na tela
 let nivel = nivelHeroi(xpHeroi);
 console.log(`O herói ${nomeHeroi} está no nível: ${nivel}`);
